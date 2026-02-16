@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Monify - Smart Expense Tracking</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
@@ -13,104 +15,133 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #1e3a8a, #0f172a);
     color: white;
     line-height: 1.6;
 }
 
+/* HERO SECTION */
 header {
-    padding: 100px 20px;
+    padding: 120px 20px 100px;
     text-align: center;
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 25px;
 }
 
 header h1 {
     font-size: 56px;
-    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 header p {
+    margin-top: 15px;
     font-size: 20px;
     color: #94a3b8;
 }
 
-.btn {
+.cta-btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 12px 30px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 30px;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    border-radius: 40px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     transition: 0.3s ease;
 }
 
-.btn:hover {
-    background: #0ea5e9;
+.cta-btn:hover {
+    transform: scale(1.05);
 }
 
+/* SECTION */
 section {
-    padding: 80px 20px;
-    max-width: 1100px;
+    padding: 100px 20px;
+    max-width: 1200px;
     margin: auto;
 }
 
 .section-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     color: #38bdf8;
 }
 
+/* FEATURES */
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
-.feature-box {
+.feature-card {
     background: rgba(255,255,255,0.05);
     padding: 30px;
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s ease;
 }
 
-.feature-box:hover {
-    transform: translateY(-8px);
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(56,189,248,0.4);
 }
 
-.feature-box h3 {
-    margin-bottom: 10px;
+.feature-card h3 {
+    margin-bottom: 15px;
 }
 
-.screenshots {
+/* SCREENSHOTS */
+.screenshot-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 40px;
 }
 
-.screenshots img {
+.phone {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    transition: 0.4s ease;
+}
+
+.phone img {
     width: 100%;
     border-radius: 20px;
-    transition: 0.3s;
 }
 
-.screenshots img:hover {
-    transform: scale(1.05);
+.phone:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(99,102,241,0.5);
 }
 
-footer {
+/* PRIVACY SECTION */
+.privacy-box {
     text-align: center;
-    padding: 40px 20px;
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+    padding: 50px 20px;
+    text-align: center;
     background: #0f172a;
     color: #94a3b8;
+    margin-top: 80px;
 }
 
-@media(max-width:768px) {
+@media(max-width:768px){
     header h1 {
-        font-size: 40px;
+        font-size: 38px;
     }
 }
 </style>
@@ -119,27 +150,28 @@ footer {
 <body>
 
 <header>
+    <img src="images/logo.png" alt="Monify Logo" class="logo">
     <h1>Monify 💰</h1>
-    <p>Smart. Secure. Simple Expense Tracking.</p>
-    <a href="#features" class="btn">Explore Features</a>
+    <p>Smart. Secure. Simple Expense Tracking</p>
+    <a href="#features" class="cta-btn">Explore Features</a>
 </header>
 
 <section id="features">
     <h2 class="section-title">Core Features</h2>
     <div class="features">
-        <div class="feature-box">
+        <div class="feature-card">
             <h3>Daily Expense Tracking</h3>
-            <p>Add and manage daily spending effortlessly.</p>
+            <p>Add and manage expenses effortlessly in seconds.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-card">
             <h3>Category Management</h3>
-            <p>Organize expenses for better clarity.</p>
+            <p>Organize spending for better financial clarity.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-card">
             <h3>Weekly & Monthly Reports</h3>
-            <p>Understand spending patterns with summaries.</p>
+            <p>Visual insights to understand spending trends.</p>
         </div>
-        <div class="feature-box">
+        <div class="feature-card">
             <h3>Privacy First</h3>
             <p>100% local storage. No ads. No tracking.</p>
         </div>
@@ -148,21 +180,31 @@ footer {
 
 <section>
     <h2 class="section-title">App Screenshots</h2>
-    <div class="screenshots">
-        <!-- Replace these with your actual image file names -->
-        <img src="images/screenshot1.png" alt="Screenshot 1">
-        <img src="images/screenshot2.png" alt="Screenshot 2">
-        <img src="images/screenshot3.png" alt="Screenshot 3">
-        <img src="images/screenshot4.png" alt="Screenshot 4">
+    <div class="screenshot-grid">
+        <div class="phone">
+            <img src="images/screenshot1.png" alt="Screenshot 1">
+        </div>
+        <div class="phone">
+            <img src="images/screenshot2.png" alt="Screenshot 2">
+        </div>
+        <div class="phone">
+            <img src="images/screenshot3.png" alt="Screenshot 3">
+        </div>
+        <div class="phone">
+            <img src="images/screenshot4.png" alt="Screenshot 4">
+        </div>
     </div>
 </section>
 
 <section>
     <h2 class="section-title">Privacy Commitment</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-        Monify does not collect or transmit personal financial data.
-        All information remains securely stored on your device.
-    </p>
+    <div class="privacy-box">
+        <p>
+            Monify is built with a privacy-first approach. All financial data
+            remains securely stored on your device. No external servers.
+            No third-party tracking. No advertising SDKs.
+        </p>
+    </div>
 </section>
 
 <footer>
